@@ -13,8 +13,8 @@ class NoteViewSet(viewsets.ModelViewSet):
         
                 
     def get_queryset(self):
-        user = self.request.user
-        return Note.objects.filter(user=user)
+        user = self.request.user        
+        return self.queryset.filter(user=user)
     
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)        
