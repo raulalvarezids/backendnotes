@@ -25,6 +25,7 @@ SECRET_KEY = 'django-insecure-jev3m-tucb+x^jbl(wu!jk@h$y9=6a5a4f^xdcc2^$3%91c#u*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+
 ALLOWED_HOSTS = []
 
 
@@ -37,6 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+     'rest_framework',
+     'rest_framework.authtoken',
+     'Notes',
+     'Users',     
+     
 ]
 
 MIDDLEWARE = [
@@ -74,12 +81,8 @@ WSGI_APPLICATION = 'backendnotes.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+  
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
