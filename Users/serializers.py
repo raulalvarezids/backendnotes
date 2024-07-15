@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
+from rest_framework.validators import UniqueTogetherValidator
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
@@ -8,3 +9,10 @@ class UserSerializer(serializers.ModelSerializer):
         extra_kwargs = {
            'email': {'required': True},        
         }
+        validators = [
+            UniqueTogetherValidator(
+                queryset=User.objects.all(),
+                fields=['email',]
+                
+            )
+        ]
