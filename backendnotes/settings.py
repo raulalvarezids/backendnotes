@@ -100,17 +100,7 @@ WSGI_APPLICATION = 'backendnotes.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-  'default': {
-    'ENGINE': 'django.db.backends.postgresql',
-    'NAME': 'notes',
-    'USER': 'notes_owner',
-    'PASSWORD': 'IrA72ebTZWfU',
-    'HOST': 'ep-old-math-a5m4eczu.us-east-2.aws.neon.tech',
-    'PORT':5432,
-    'OPTIONS': {
-      'sslmode': 'require',
-    },
-  }
+  
 }
 
 # Password validation
