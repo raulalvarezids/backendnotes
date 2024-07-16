@@ -79,7 +79,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    'https://notespractice.netlify.app/'
+    'https://notespractice.netlify.app/',
 ]
 
 
