@@ -79,7 +79,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    os.environ.get('URL_ALLOW')
+    os.environ.get('URL_ALLOW'),
 ]
 
 
