@@ -50,18 +50,21 @@ INSTALLED_APPS = [
      'rest_framework.authtoken',
      'Notes',
      'Users',     
-      "corsheaders",
+     'corsheaders',
+     'drf_spectacular'
      
 ]
 
-# REST_FRAMEWORK = {
-#     'DEFAULT_AUTHENTICATION_CLASSES': (
-#         'rest_framework.authentication.TokenAuthentication',
-#     ),
-#     'DEFAULT_PERMISSION_CLASSES': (
-#         'rest_framework.permissions.IsAuthenticated',
-#     ),
-# }
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'NOTES API',
+    'DESCRIPTION': 'Backend made for notes web',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,    
+}
 
 
 
